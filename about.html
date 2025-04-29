@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="fanyi-2.png">
+    <link rel="stylesheet" href="css/test.css">
+    <title>About-FanYi Qu</title>
+    <style>
+        .content {
+            display: block;
+        }
+        .about {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        .photo {
+            position: absolute;
+            max-width: 20vw;
+            max-height: 20vh;
+        }
+        #me {
+            z-index: 99;
+            max-width: 40vw;
+            max-height: 40vh;
+        }
+        #intro-me {
+            position: relative;
+            
+
+        }
+        #intro-me p {
+            position: fixed;
+            left: 2vw;
+            bottom: 10vh;
+            white-space: pre-wrap;
+            max-width: 40vw;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <nav class="daohang">
+            <ul class="nav-link">
+              <li><a href="indextest.html">Index</a></li>
+              <li><a href="fragment.html">Fragment</a></li>
+              <li><a href="event.html">Event</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <div class="about">
+            
+            <div>
+                <img class="photo" src="case/IMG_0626 拷贝.png" alt="">
+                <img class="photo" src="case/凡怡013 拷贝.png" alt="">
+                <img class="photo" src="case/凡怡038 拷贝.png" alt="">
+                <img id="me" class="photo" src="case/凡怡048 拷贝 2.png" alt="">
+                <img class="photo" src="case/截屏2024-05-15 上午4.07 拷贝.png" alt="">
+                <img class="photo" src="case/未标题-1-17 拷贝.png" alt="">
+            </div>
+            <div id="intro-me">
+                <p>About 
+                    Fanyi is a London-educated new media artist specializing in computational art and interactive installations. A 2024 graduate of Goldsmiths, University of London's Computational Art program, they founded *Ginger Studio* in China to explore the intersection of human connection, digital interfaces, and playfully surreal kinetic systems. Their work interrogates how technology mediates relationships through sensors, generative algorithms, and absurdist mechanical interventions.  
+                </p>
+               
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
+<script>
+    function getRandomPosition(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        window.onload = function() {
+            const photos = document.querySelectorAll('.photo');
+            photos.forEach(photo => {
+                const randomX = getRandomPosition(80);
+                const randomY = getRandomPosition(60);
+
+                
+                photo.style.left = randomX + 'vw';
+                photo.style.top = randomY + 'vh';
+
+            });
+            const mepos = document.getElementById('me');
+            const me = document.getElementById('intro-me');
+            me.style.left = mepos.style.left;
+            me.style.top = mepos.style.top;
+        };
+</script>

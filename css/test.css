@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+i {
+    font-style: normal;
+}
+/* 基础布局 */
+.content {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow: scroll;
+    /* font-size: 5rem; */
+}
+.header {
+    height: 100vh;
+    width:100vw;
+    scroll-snap-align: start;
+    filter: contrast(5);
+    overflow: hidden;
+}
+.case {
+    flex :0 1 100%;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width:100vw;
+    scroll-snap-align: start;
+    scroll-padding: -20px;
+}
+
+main {
+    filter: blur(5px);
+}
+.name {
+    /* background-color: #fff; */
+    color: #00000050;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    font-weight: 800;
+    z-index: 1;
+}
+
+/* 导航栏 */
+.daohang {
+    position: fixed;
+    z-index: 2;
+
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    top: 0%;
+    left: 0;
+
+}
+
+.jiaobiao  {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-link {
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+    list-style-type: none;
+    padding: 2rem;
+}
+.nav-link li {
+    margin:1rem;
+    padding: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: solid 0.1rem;
+    background-color: #fff;
+    border-radius: 0.8rem;
+}
+.nav-link li:hover{
+    /* margin:1rem; */
+    /* padding: 0.2rem; */
+    /* padding-left: 2rem; */
+    /* padding-right: 2rem; */
+    border: solid 0.1rem;
+    background-color: #000000;
+    border:  #fff;
+    scale: 125%;
+    transition: 0.5s;
+ 
+}
+.nav-link a{
+    /* font-size: clamp(1.5rem,1vmax,1.8rem); */
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+.nav-link a:hover{
+    color: #fff;
+}
+
+/* 案例区 */
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    filter: blur(20);
+}
+#intro1::before{
+   color: #000000;
+    content: "<GravityWave>, 2023";
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    font-size: 1.2rem;
+    display: block;
+    font-weight: 500;
+    background-color: #ffffff84;
+    z-index: 1;
+    padding: 1rem;
+
+}
+#intro1::after{
+     color: #000000;
+     content: "Solo Exhibition \A PVC fabric, 0.5cm*120cm*1000cm  \A 22.04.2023 \A ";
+     position: absolute;
+     top: 15%;
+     left: 2%;
+     display: block;
+     white-space: pre;
+     background-color: #ffffff84;
+     z-index: 1;
+     padding: 1rem;
+ }
+ 
+  #intro2::before{
+    color: #000000;
+     content: "<City> Series, 2022-2024";
+     position: absolute;
+     top: 10%;
+     left: 2%;
+     font-size: 1.2rem;
+     display: block;
+     font-weight: 500;
+     background-color: #ffffff84;
+     z-index: 1;
+     padding: 1rem;
+ 
+ }
+ #intro2::after{
+      color: #000000;
+      content: "Art IP: Enerten Everywhere Series \A Mixed reality video Series, 4:3  \A 2022-2024 \A ";
+      position: absolute;
+      top: 15%;
+      left: 2%;
+      display: block;
+      white-space: pre;
+      background-color: #ffffff84;
+      z-index: 1;
+      padding: 1rem;
+  }
+
+  #intro3::before{
+    color: #000000;
+     content: "<Domino>, 2023";
+     position: absolute;
+     top: 10%;
+     left: 2%;
+     font-size: 1.2rem;
+     display: block;
+     font-weight: 500;
+     background-color: #ffffff84;
+     z-index: 1;
+     padding: 1rem;
+ 
+ }
+ #intro3::after{
+      color: #000000;
+      content: "Solo pop up exhibition \A 2000 Domino pieces & 2000 icepop sticks, 1000cm*300cm  \A 13.09.2023 \A ";
+      position: absolute;
+      top: 15%;
+      left: 2%;
+      display: block;
+      white-space: pre;
+      background-color: #ffffff84;
+      z-index: 1;
+      padding: 1rem;
+  }
+
+  #intro4::before{
+    color: #000000;
+     content: "<48h isolation>, 2021";
+     position: absolute;
+     top: 10%;
+     left: 2%;
+     font-size: 1.2rem;
+     display: block;
+     font-weight: 500;
+     background-color: #ffffff84;
+     z-index: 1;
+     padding: 1rem;
+ 
+ }
+ #intro4::after{
+      color: #000000;
+      content: "Performance Art \A video, 48hours  \A 21.06.2021 \A ";
+      position: absolute;
+      top: 15%;
+      left: 2%;
+      display: block;
+      white-space: pre;
+      background-color: #ffffff84;
+      z-index: 1;
+      padding: 1rem;
+  }
+  #intro5::before{
+    color: #000000;
+     content: "<Observe>, 2021";
+     position: absolute;
+     top: 10%;
+     left: 2%;
+     font-size: 1.2rem;
+     display: block;
+     font-weight: 500;
+     background-color: #ffffff84;
+     z-index: 1;
+     padding: 1rem;
+ 
+ }
+ #intro5::after{
+      color: #000000;
+      content: "Brain-Computer Interface Devices & Performance Art \A Eeg brainwave Device \A 25.11.2021 \A ";
+      position: absolute;
+      top: 15%;
+      left: 2%;
+      display: block;
+      white-space: pre;
+      background-color: #ffffff84;
+      z-index: 1;
+      padding: 1rem;
+  }
+
+.bg video{
+    
+    height: 80vh;
+    width: auto;
+    z-index: 0;
+
+}
+.sticky {
+    position: sticky;
+    top:0;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    display: none;
+ z-index: 1;
+}
+.sticky span {
+    font-size: 3rem;
+}
+
+
+/* 响应式 */
+@media (max-width : 1200px){
+    .name{
+        font-size: 5rem;
+    }
+    .nav-link a{
+        font-size: 4vw;
+    }
+    .bg video {
+        width:auto;
+        height:100vh;
+    }
+    .sticky {
+        display: flex;
+    }
+    #intro1::after {
+        display: none;
+    }
+    #intro1::before{
+        display: none;
+    }
+    .bg span {
+        display: none;
+    }
+}
+@media (max-width : 4000px){
+    .name{
+        font-size: 6rem;
+    }
+
+}
+@media (max-width: 768px) {
+    html, body {
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .content, .block, .block ul {
+      width: 100vw !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box;
+    }
+    .block li {
+      width: 100vw !important;
+      max-width: 100vw !important;
+      min-width: 100vw !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+    }
+    .block li img,
+    .block li video {
+      max-width: 95vw !important;
+      max-height: 60vw !important;
+      margin: 0 auto !important;
+      display: block;
+    }
+  }
