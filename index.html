@@ -6,6 +6,7 @@
     <title>Fragment-FanYi Qu</title>
     <link rel="shortcut icon" href="fanyi-2.png">
     <link rel="stylesheet" href="css/test.css">
+    <!-- 移除内联样式 -->
     <style>
         * {
             margin: 0;
@@ -87,15 +88,49 @@
         transform: translate(-50%,0%);
        }
 
+       @media(min-width: 1201px) {
+           /* 新增悬停效果样式 */
+           .block li::before {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background-color: rgba(0, 0, 0, 0.7);
+               opacity: 0;
+               transition: opacity 0.5s ease;
+               z-index: 2; /* 确保色块在图片上方 */
+           }
+           
+           .block li::after {
+               content: "description";
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               color: #fff;
+               opacity: 0;
+               transition: opacity 0.5s ease;
+               pointer-events: none;
+               z-index: 3; /* 确保文字在色块上方 */
+           }
+           
+           .block li:hover::before,
+           .block li:hover::after {
+               opacity: 1;
+           }
+       }
+       
        @media(max-width: 1200px){
-        .block li {
-            flex: 0 1 calc(50% - 2rem);
-        }
+           .block li {
+               flex: 0 1 calc(50% - 2rem);
+           }
        }
        @media(max-width: 768px){
-        .block li {
-            flex: 0 1 calc(100% - 2rem);
-        }
+           .block li {
+               flex: 0 1 calc(100% - 2rem);
+           }
        }
 
     </style>
@@ -112,110 +147,114 @@
         </nav>
        <div class="block">
             <ul>
+                <!-- 自动生成的图片和视频列表 -->
                 <li>
-                    <img src="case/case6/1.GIF" alt="">
+                    <img src="case/case_21.png" alt="">
                 </li>
                 <li>
-                    <video src="case/case2/10.mp4" loop autoplay muted></video>
+                    <img src="case/case_20.GIF" alt="">
                 </li>
                 <li>
-                    <img src="case/case6/2.GIF" alt="">
+                    <img src="case/case_19.GIF" alt="">
                 </li>
                 <li>
-                    <img src="case/case6/6.gif" alt="">
+                    <img src="case/case_17.gif" alt="">
                 </li>
                 <li>
-                    <img src="case/case6/5.png" alt="">
-                </li>
-                
-                <li>
-                    <img src="case/case6/3.GIF" alt="">
+                    <img src="case/case_30.JPG" alt="">
                 </li>
                 <li>
-                    <img src="case/case2/IMG_9056.JPG" alt="">
+                    <img src="case/case_18.GIF" alt="">
                 </li>
                 <li>
-                    <img src="case/case1/fanyi038.jpg" alt="">
-                </li>
-                <li>
-                    <img src="case/case6/4.GIF" alt="">
-                </li>
-                <li>
-                    <img src="case/case1/IMG_9927 拷贝.jpg" alt="">
+                    <img src="case/case_12.jpg" alt="">
                 </li>
                 
                 <li>
-                    <img src="case/case3/IMG_6477.JPG" alt="">
+                    <img src="case/case_11.PNG" alt="">
                 </li>
                 
                 <li>
-                    <img src="case/case5/截屏2024-05-13 上午6.31.jpg" alt="">
+                    <video src="case/case_13.mp4" loop autoplay muted></video>
                 </li>
                 <li>
-                    <img src="case/case2/IMG_9051.JPG" alt="">
+                    <img src="case/case_14.jpg" alt="">
                 </li>
                 <li>
-                    <video src="case/case1/3f6fcaeaeqf595a792fbf129d74ca682.MOV" loop autoplay muted></video>
+                    <img src="case/case_15.JPG" alt="">
                 </li>
                 <li>
-                    <img src="case/case4/IMG_0626.jpg" alt="">
+                    <img src="case/case_16.GIF" alt="">
                 </li>
                 <li>
-                    <img src="case/case2/untitled 3.png" alt="">
-                </li>
-                
-                <li>
-                    <img src="case/case2/demo.jpg" alt="">
-                </li>
-                
-                <li>
-                    <img src="case/case3/IMG_6476.JPG" alt="">
+                    <video src="case/case_25.mov" loop autoplay muted></video>
                 </li>
                 <li>
-                    <img src="case/case1/截屏2024-05-15 上午5.11.15.png" alt="">
+                    <img src="case/case_26.jpg" alt="">
                 </li>
                 <li>
-                    <img src="case/case2/截屏2023-02-08 下午10.00.17.png" alt="">
+                    <img src="case/case_27.png" alt="">
                 </li>
                 <li>
-                    <img src="case/case4/截屏2022-04-27 下午2.25.12.png" alt="">
+                    <img src="case/case_28.JPG" alt="">
                 </li>
                 <li>
-                    <img src="case/case1/IMG_4224.PNG" alt="">
+                    <img src="case/case_29.jpg" alt="">
                 </li>
                 <li>
-                    <video src="case/case2/0003.mp4" loop autoplay muted></video>
+                    <img src="case/case_10.JPG" alt="">
                 </li>
                 <li>
-                    <video src="case/case2/QIQIU3.mp4" loop autoplay muted></video>
-                </li>
-                <li>
-                    <img src="case/case2/8.1hua-18.jpg" alt="">
-                </li>
-                <li>
-                    <video src="case/case5/未命名.mov" loop autoplay muted></video>
+                    <img src="case/case_3.png" alt="">
                 </li>
                 
                 <li>
-                    <img src="case/case3/IMG_6475.JPG" alt="">
+                    <img src="case/case_31.png" alt="">
                 </li>
                 <li>
-                    <video src="case/case1/俄罗斯方块.mp4" loop autoplay muted></video>
+                    <video src="case/case_32.mp4" loop autoplay muted></video>
                 </li>
                 <li>
-                    <img src="case/case1/凡怡013.jpg" alt="">
+                    <img src="case/case_33.jpg" alt="">
                 </li>
                 <li>
-                    <img src="case/case1/截屏2024-05-15 上午5.15.17.png" alt="">
+                    <video src="case/case_34.mp4" loop autoplay muted></video>
                 </li>
                 <li>
-                    <img src="case/case1/IMG_3381.PNG" alt="">
+                    <video src="case/case_35.mp4" loop autoplay muted></video>
                 </li>
                 <li>
-                    <img src="case/case1/IMG_3676.JPG" alt="">
+                    <img src="case/case_36.JPG" alt="">
                 </li>
                 <li>
-                    <img src="case/case1/0d5071870ae099f6abfe7f6da94c92c4.JPG" alt="">
+                    <img src="case/case_37.JPG" alt="">
+                </li>
+                <li>
+                    <img src="case/case_38.JPG" alt="">
+                </li>
+                <li>
+                    <img src="case/case_39.png" alt="">
+                </li>
+                <li>
+                    <img src="case/case_4.png" alt="">
+                </li>
+                <li>
+                    <img src="case/case_40.jpg" alt="">
+                </li>
+                <li>
+                    <img src="case/case_5.jpg" alt="">
+                </li>
+                <li>
+                    <img src="case/case_6.png" alt="">
+                </li>
+                <li>
+                    <img src="case/case_7.png" alt="">
+                </li>
+                <li>
+                    <video src="case/case_8.MOV" loop autoplay muted></video>
+                </li>
+                <li>
+                    <img src="case/case_9.PNG" alt="">
                 </li>
             </ul>
        </div>
