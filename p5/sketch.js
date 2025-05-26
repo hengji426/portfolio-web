@@ -6,7 +6,7 @@ let slider;
 class Gradient {
   constructor() {
     // Set properties for the gradient object
-    if(windowWidth>992){
+    if(windowWidth>768){  // 将阈值改为768px
       this.rectwidth = hengpingwidth;
     }else{
       this.rectwidth = shupingwidth;
@@ -19,8 +19,9 @@ class Gradient {
 
     this.dx = random(-2, 2);
     this.dy = random(-2, 2);
-    this.sc = color(random(255), random(255), random(255), random(100, 200));
-    this.ec = color(random(255), random(255), random(255), 0);
+    colorMode(HSB); // 设置颜色模式为HSB
+    this.sc = color(random(360), random(20,100), random(70, 100), random(100, 200));
+    this.ec = color(random(360), random(20,100), random(70, 100), 0);
   }
   
   // Method to update the position of the gradient object
@@ -62,42 +63,9 @@ class Gradient {
 // Initialize variables and arrays
 let gradient;
 let grads = [];
-const container = document.querySelector('.content');
-const item = document.querySelector('.header');
-const distance =800;
-container.addEventListener('scroll', function(){
-  
-  // print(container.scrollTop);
-  let video1 = document.getElementById('video1');
-  let num1 = container.scrollTop-windowHeight;
-// print(num1);
-  let video2 = document.getElementById('video2');
-  let num2 = container.scrollTop-windowHeight*2;
 
 
   
-  if (num1 > -1 && num1 < windowHeight) {
-    video1.play();
-  } else {
-    video1.pause();
-  }
-  if (num2 > -1 && num2 < windowHeight) {
-    video2.play();
-  } else {
-    video2.pause();
-  }
-
-});
-
-container.addEventListener('DOMContentLoaded', setTimeout(function() { scroll(); }, 3000));
-
-function scroll(){
-  container.scrollIntoView({ behavior: 'smooth' })
-    container.scrollTop += distance;
-    print(container.scrollTop);
-  
-  
-}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -134,7 +102,9 @@ pop();
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  if(windowWidth>992){
+  shupingwidth = windowWidth * 0.8;  // 更新宽度值
+  hengpingwidth = windowWidth * 0.5;
+  if(windowWidth>768){  // 保持一致的阈值
     for (let i of grads) {
       i.rectwidth = hengpingwidth;
     }
